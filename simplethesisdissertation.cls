@@ -8,11 +8,14 @@
 %% <https://github.com/zachscrivena/simple-thesis-dissertation>
 %% This is free and unencumbered software released into the
 %% public domain; see <http://unlicense.org> for details.
+%% Modified to follow Turku University of Applied Sciences style
+%% <https://github.com/ismacasti/simple-thesis-dissertation>
+%% Ismael Castiñeira
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{simplethesisdissertation}[2016/12/25 Simple Thesis Dissertation https://github.com/zachscrivena/simple-thesis-dissertation]
+\ProvidesClass{simplethesisdissertation}[2017/03/22 Simple Thesis Dissertation https://github.com/ismacasti/simple-thesis-dissertation]
 
 \DeclareOption{a4paper}{\PassOptionsToClass{\CurrentOption}{report}}
 \DeclareOption{letterpaper}{\PassOptionsToClass{\CurrentOption}{report}}
@@ -27,17 +30,17 @@
 \ProcessOptions\relax
 
 % Use report class as the base class.
-\LoadClass[12pt,oneside]{report}
+\LoadClass[11pt,oneside]{report}
 
 % Geometry package for page margins.
 % A4-size (210 mm × 297 mm) single-sided pages
 \RequirePackage[
-left=25.4mm,
-right=25.4mm,
-top=20mm,
-bottom=16mm,
+left=40mm,
+right=20mm,
+top=30mm,
+bottom=30mm,
 headsep=6mm, % header separation, above text body
-footskip=6mm] % footer skip, below text body
+footskip=10mm] % footer skip, below text body
 {geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,38 +79,40 @@ footskip=6mm] % footer skip, below text body
 \RequirePackage{lmodern} % For Latin Modern fonts.
 
 % Font: Main font, \textnormal{}, \normalfont.
-\setmainfont
-[Path=./Fonts/tinos/,
-ItalicFont=Tinos-Italic,
-BoldFont=Tinos-Bold,
-BoldItalicFont=Tinos-BoldItalic,
-Scale=1.00]
-{Tinos-Regular.ttf}
+% TUAS uses Arial, let's use Carlito for now
+% \setmainfont
+% [Path=./Fonts/carlito/,
+% ItalicFont=Carlito-Italic,
+% BoldFont=Carlito-Bold,
+% BoldItalicFont=Carlito-BoldItalic,
+% Scale=1.0]
+% {Carlito-Regular.ttf}
 
+\setmainfont{Arial}
 % Font: Roman font, \textrm{}, \rmfamily.
-\setromanfont
-[Path=./Fonts/tinos/,
-ItalicFont=Tinos-Italic,
-BoldFont=Tinos-Bold,
-BoldItalicFont=Tinos-BoldItalic,
-Scale=1.00]
-{Tinos-Regular.ttf}
+% \setromanfont
+% [Path=./Fonts/tinos/,
+% ItalicFont=Tinos-Italic,
+% BoldFont=Tinos-Bold,
+% BoldItalicFont=Tinos-BoldItalic,
+% Scale=1.00]
+% {Tinos-Regular.ttf}
 
 % Font: Sans-serif font, \textsf{}, \sffamily.
-\setsansfont
-[Path=./Fonts/carlito/,
-ItalicFont=Carlito-Italic,
-BoldFont=Carlito-Bold,
-BoldItalicFont=Carlito-BoldItalic,
-Scale=0.95]
-{Carlito-Regular.ttf}
-
-% Font: Monospace font, \texttt{}, \ttfamily.
-\setmonofont
-[Path=./Fonts/mplus/,
-BoldFont=mplus-1m-bold,
-Scale=0.95]
-{mplus-1m-regular.ttf}
+% \setsansfont
+% [Path=./Fonts/carlito/,
+% ItalicFont=Carlito-Italic,
+% BoldFont=Carlito-Bold,
+% BoldItalicFont=Carlito-BoldItalic,
+% Scale=0.95]
+% {Carlito-Regular.ttf}
+% 
+% % Font: Monospace font, \texttt{}, \ttfamily.
+% \setmonofont
+% [Path=./Fonts/mplus/,
+% BoldFont=mplus-1m-bold,
+% Scale=0.95]
+% {mplus-1m-regular.ttf}
 
 % Symbols.
 \RequirePackage{textcomp} % For symbols.
@@ -122,8 +127,8 @@ Scale=0.95]
 
 \titlespacing*{\part}%
 {0em}% left
-{8em}% vertical space before title
-{4em}% vertical space after title
+{0em}% vertical space before title
+{0.85cm}% vertical space after title
 [0em]% right
 
 \titleformat{\part}
@@ -144,8 +149,8 @@ Scale=0.95]
 
 \titlespacing*{\chapter}%
 {0em}% left
-{5em}% vertical space before title
-{2em}% vertical space after title
+{0em}% vertical space before title
+{0.85cm}% vertical space after title
 [0em]% right
 
 \titleformat{\chapter}
