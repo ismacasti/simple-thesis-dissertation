@@ -1,15 +1,21 @@
 \chapter{Introduction}
 
-{\color{red}%
-Insert thesis introduction here.
-This is a template for a simple thesis or dissertation (Ph.D. or master's degree) or technical report, in {\XeLaTeX}.
-For more information, please visit
-\begingroup
-\par\centering
-\href{https://github.com/zachscrivena/simple-thesis-dissertation}
-{\url{https://github.com/zachscrivena/simple-thesis-dissertation}}
-\par
-\endgroup
-}
+The Internet, as we currently now, was developed in the 1980s in the name of ARPANET. It wasn't designed to be the global information network used by the entire human society, but nevertheless it managed to grow and prosper for more than 30 years. But there is a limit to the growth of the network: the address space. The Internet Protocol (version 4), the required network stack that runs in every device connected to the Internet, works assigning an unique address to each and every device, needed for identification and location definition. When it was designed and implemented, the Internet Protocol used 32 bits for the addresses; that gives a theoretical maximum of around 4 billion devices connected to the network. This is clearly insufficient.
 
-\lipsum[1-8]
+The IETF developed an updated version of the protocol (version 6) in 1998. IPv6 is designed to work as a planetary network of trillions of devices interconnected to each other. But it was not backwards compatible with the IPv4 stack that was already being used in the whole world. It took several years to the stack to mature and be implemented in devices and operating systems, so the deployment could not be possible until the 2010s. 
+
+Meanwhile, in those years, the way Internet connections changed: from devices only connecting when it was necessary (dial-up) to being always on-line. The address space for IPv4 was completely exhausted in 2011, even with the enormous work by telecommunication companies and software vendors in mitigation efforts. Still, the network kept working and growing, but increasing the complexity of applications, services and networking due to the mitigation techniques such as NAT and extreme subnetting complexities.
+
+People have become content with such limitations and complexities, and the whole developer community design and maintain such complex systems, and expect them to always be there. But it cannot continue working in this manner forever: IPv6-only systems will soon exist, and those will not be able to access the regular IPv4 Internet. If the organization can control all the server and clients' network environments, a IPv6 solution could be cheaper due to the lower prices of addresses, and allow more flexibility and better performance, thanks to the protocol's improvements on routing.
+
+The Internet developer community has moved, in the recent years, to the Cloud Computing paradigm: virtualization of compute, storage and networking allows flexibility, cost reduction, and quicker and more reliable operations for business and organizations worldwide. ()// I don't like this phrase). 
+
+//explaining cloud 
+
+Being able to use IPv6 in cloud systems allow services to be available by IPv6 enable devices, and it can also be used in to remove or simplify support techniques like load-balancers, DNS and fail-over protocols. This is extremely important for applications offered to mobile devices; the growth of smartphones and Internet of Things devices is forcing carriers to extreme complex network architectures on IPv4, and some are only offering IPv6 already at the time of writing this document.
+
+Several cloud computing providers were tested and documented: Amazon's AWS, Microsoft's Azure, Google's Cloud Platform, and DigitalOcean. This text also analyzes CloudStack, an open-source software that can be used to create Cloud environments. 
+
+Finally, there is a theoretical implementation of the Spotify application. Spotify is a music distribution service that allows people to listen to music over the Internet, and also offers some social features. This service runs on Google's Cloud Platform, and it is not compatible with IPv6. This thesis should how leveraging IPv6 can reduce the application's complexity.
+
+These topics will provide to the reader with enough knowledge to decide if implementing IPv6 in a new cloud application is possible, and what are the vendors, platforms and changes required to accomplish it.

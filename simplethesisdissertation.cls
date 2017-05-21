@@ -53,6 +53,7 @@ footskip=10mm] % footer skip, below text body
 \RequirePackage{environ} % For easy definition of environments.
 \RequirePackage{rotating} % For rotating objects.
 \RequirePackage{framed} % For framed text.
+\RequirePackage{parskip}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PDF OUTPUT.
@@ -90,7 +91,7 @@ footskip=10mm] % footer skip, below text body
 
 \setmainfont{Arial}
 % Font: Roman font, \textrm{}, \rmfamily.
-% \setromanfont
+% \setromanfon
 % [Path=./Fonts/tinos/,
 % ItalicFont=Tinos-Italic,
 % BoldFont=Tinos-Bold,
@@ -99,13 +100,13 @@ footskip=10mm] % footer skip, below text body
 % {Tinos-Regular.ttf}
 
 % Font: Sans-serif font, \textsf{}, \sffamily.
-% \setsansfont
+\setsansfont
 % [Path=./Fonts/carlito/,
 % ItalicFont=Carlito-Italic,
 % BoldFont=Carlito-Bold,
 % BoldItalicFont=Carlito-BoldItalic,
 % Scale=0.95]
-% {Carlito-Regular.ttf}
+{Arial}
 % 
 % % Font: Monospace font, \texttt{}, \ttfamily.
 % \setmonofont
@@ -156,9 +157,9 @@ footskip=10mm] % footer skip, below text body
 \titleformat{\chapter}
 [display]% shape
 {\sffamily\bfseries\raggedright}% applied to label and text
-{\fontsize{17.5}{21}\selectfont\color{AccentOne}CHAPTER~\thechapter}% applied to the label only
+{\fontsize{17.5}{21}\selectfont\color{AccentOne}~}% applied to the label only
 {0em}% vertical spacing between label and text
-{\fontsize{30}{36}\selectfont{#1}}% applied before the text
+{\fontsize{16}{19.2}\selectfont\MakeUppercase{\thechapter ~ #1}}% applied before the text
 []% applied after the text
 
 \titleformat{name=\chapter,numberless}
@@ -171,8 +172,8 @@ footskip=10mm] % footer skip, below text body
 
 \titleformat{\section}%
 [hang]% shape
-{\fontsize{17}{20.4}\selectfont\sffamily\bfseries\raggedright}% applied to label and text
-{\color{AccentOne}\thetitle}% applied to the label only
+{\fontsize{11}{13.2}\selectfont\sffamily\raggedright}% applied to label and text
+{\thetitle}% applied to the label only
 {0.5em}% horizontal spacing between label and text
 {#1}% applied before the text
 []% applied after the text
@@ -272,6 +273,9 @@ footskip=10mm] % footer skip, below text body
 % Indented blocks.
 \newcommand{\IndentBlock}[1]{\noindent\hangafter=0\hangindent=#1\parindent\ignorespaces}
 \newcommand{\IndentHanging}{\noindent\hangafter=1\hangindent=\parindent\ignorespaces}
+
+% Paragraph spacing
+%\renewcommand{\baselinestretch}{def}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% HEADERS AND FOOTERS.

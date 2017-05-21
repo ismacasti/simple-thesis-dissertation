@@ -1,0 +1,40 @@
+% Cloud providers
+\chapter{Cloud providers}
+
+Cloud providers are companies that offer \textit{cloud computing}. These clouds have several products that anyone can use, usually in a pay-as-you-go model where the customer is charged for every unit of product used. This is usually charged by time used of compute time, amount of data stored in the cloud, and network traffic. Some companies have a cost for having public IPv4 address allocated to a virtual service.
+
+On the network topic, this thesis focuses on the IPv6 capabilities. Providers such as Amazon and Google differentiate between private and public networking, allowing what is defined as Virtual Private Cloud, which is similar to VLANs on the physical world. On the other hand, DigitalOcean only offers one type of networking service, which is the actual Internet.
+
+
+\section{IPv6 support overview}
+
+Based on the different networking models that are offered by the providers, we can differentiate four environments. Not all companies offer these types of products, and not all of them are IPv6 capable.
+
+\begin{itemize}
+	\item Outside network
+	\begin{itemize}
+		\item This only offers IPv6 on the publicly addressable services of the cloud environment. Usually is the form of load balancers and DNS servers
+	\end{itemize}
+	\item Tenant's network
+	\begin{itemize}
+		\item If the provider offers virtual networking, every product on your cloud can be interconnected to each other in the same address space. In the IPv6 case, all machines and containers are given a publicly addressable address, usually behind firewalls.
+	\end{itemize}
+	\item Management networks
+	\begin{itemize}
+		\item This only applies for OpenStack. The network used by the different services of the OpenStack package (compute, storage, MAAS...). The management network does not have to be on IPv6, as it is local only and never should be accessible to customers, applications or the outside world. Nevertheless, IPv6 can be used, even if it's just link-local space addressing.
+		
+	\end{itemize}
+	\item User interface and API endpoints
+	\begin{itemize}
+		\item IPv6 support of this elements is required for the customer's cloud administrator to use the cloud products. 
+	\end{itemize}
+\end{itemize}
+
+\section{Amazon Web Services}
+
+
+\section{Microsoft Azure}
+
+\section{Google Cloud Platform}
+
+\section{DigitalOcean}
