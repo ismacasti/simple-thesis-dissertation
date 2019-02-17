@@ -32,8 +32,36 @@ Based on the different networking models that are offered by the providers, we c
 
 \section{Amazon Web Services}
 
+Amazon Web Services is the marketshare leader cloud computing provider. They offer a great amount of services, such as computing, storage, and analytics. AWS is based around regions and availability zones. Resources can be global, regional or just liimited to a availability zone. Amazon's VPN is IPv6 capable, so it can integrate in customer's in premises networks, or other clouds, as long as those are on IPv6 too.
+
+Amazon started offering IPv6 support in late 2016, and it is currently available in all regions and AZs. Virtual Private Cloud is the term used in AWS for the tenant's network, and most products are integrated in it. VPCs are defined by the user, and all aspects can be set.
+
+//cool pics and references of amazon's tenant network
+
+IPv6 support is excellent in AWS's tenant network. You can easily define a VPC as IPv6-capable, and it would get a public routable range. Existing networks can have version 6 enabled just as easy. IPv4 is still required, but it is not necessary to route outside the network.
+
+
+
+CloudFront supports content delivery to IPv6 clients, as well as IPv4, but the connections to the origin servers remain on IPv4. There are limitations if there are policies restricting by source IP addresses, which are not compatible with IPv6.
+
+Amazon S3 was one of the first Amazon's services to offer IPv6 support. This is implemented offering AAAA queries to all bucket DNS requests. Similar to CloudFront, there are limitations if IAM policies are based on IP addresses, but they can be used if IPv6 ranges are included in the policy.
+
+Route 53, Amazon's DNS service, supports queries over IPv6. It also offers AAAA DNS records, and reverse queries of version 6 addresses work as well.
+
+Amazon RDS (Relational RDS) does not support IPv6. RDS instances communicate with the other instances and services only using IPv4.
+
+The AWS IoT Gateway supports IPv6, and it can use all functionality with devices running on either network. The EC2 container service also supports IPv6, but only through an Application Load Balancer, same with the Lambda functions.  
+
+// AWS architecture 
+\subsection{AWS VPC setup}
+
+// IPv6 configuration manual
+
+// Extra? Cloudformation script
 
 \section{Microsoft Azure}
+
+
 
 \section{Google Cloud Platform}
 

@@ -180,11 +180,12 @@ footskip=10mm] % footer skip, below text body
 
 \titleformat{\subsection}%
 [hang]% shape
-{\fontsize{14.5}{17.4}\selectfont\sffamily\bfseries\raggedright}% applied to label and text
-{\color{AccentOne}\thetitle}% applied to the label only
+{\fontsize{11}{13.2}\selectfont\sffamily\raggedright}% applied to label and text
+{\thetitle}% applied to the label only
 {0.5em}% horizontal spacing between label and text
 {#1}% applied before the text
 []% applied after the text
+
 
 \titleformat{\subsubsection}%
 [hang]% shape
@@ -301,9 +302,9 @@ footskip=10mm] % footer skip, below text body
 % Plain style, for chapter pages.
 \def\ps@plain{%
 \def\@oddhead{\UseHeaderFooterFont%
-\hfill\thepage\hfill}%
+\hfill\thepage}%
 \def\@evenhead{\UseHeaderFooterFont%
-\hfill\thepage\hfill}%
+\hfill\thepage}%
 \def\@oddfoot{\UseHeaderFooterFont\FooterText}%
 \def\@evenfoot{\UseHeaderFooterFont\FooterText}}
 
